@@ -1,0 +1,47 @@
+.app {
+    &-hero {
+        min-height: calc(100vh - 64px - 48px);
+    }
+
+    &-content {
+        height: 50%;
+        background-color: #EB3E48;
+    }
+}
+
+// Road
+.road-list {
+    position: relative;
+    margin-top: 2rem;
+    padding: 0;
+    border-radius: 12px;
+    list-style: none;
+
+    &__item {
+        position: relative;
+        margin-left: 10px;
+        padding: 0;
+        padding-bottom: 1.5rem;
+        padding-left: 20px;
+        border-left: 1px solid rgb(235 62 72 / 25%);
+        list-style: none;
+
+        &:last-child {
+            padding-bottom: 0;
+            border: 0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -8px;
+            width: 15px;
+            height: 15px;
+            border: 1px solid #EB3E48;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 3px 3px 0 rgb(235 62 72 / 25%);
+        }
+    }
+}

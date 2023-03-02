@@ -1,0 +1,26 @@
+.preview {
+    &-star {
+        &__container {
+            min-height: 200px;
+        }
+
+        &__image {
+            &__overlay {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgb(0 0 0 / 20%);
+            }
+        }
+
+        &__title {
+            background-color: rgb(0 0 0 / 0.4);
+        }
+
+        &__achievements {
+            background-color: #FF444F;
+        }
+    }
+}
