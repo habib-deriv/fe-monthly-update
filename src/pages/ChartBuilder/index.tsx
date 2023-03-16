@@ -1,9 +1,9 @@
 import ChartBuilder from '@components/ChartBuilder';
-import ChartView from '@components/ChartView';
+import GithubUpdates from '@components/GithubUpdates';
 
 const ChartBuilderStandalone = () => {
     return(
-        <ChartView is_editable={true}/>
+        <GithubUpdates is_editable={true}/>
     );
 };
 
