@@ -3,7 +3,7 @@ import {ChartType, TUniversalChart} from '@/types/charts.types';
 import {createRecord, updateRecord} from '@/utils/db-operations';
 import ChartBuilder from '@components/ChartBuilder';
 import UniversalChart from '@components/charts/UniversalChart';
-import './ChartView.scss';
+import './RedmineUpdates.scss';
 import {useFetch} from '@/hooks';
 import {COLLECTIONS} from '@/constants';
 import {useSelector} from 'react-redux';
@@ -18,9 +18,9 @@ interface TChartViewContent {
     [n: number]:  TUniversalChart | TChartViewContent;
 }
 
-const ChartView = ({is_editable}: TChartView) => {
+const RedmineUpdates = ({is_editable}: TChartView) => {
     const { settings } = useSelector((state: TRootState) => state);
-    const [is_loading_charts, charts, grouped_charts] = useFetch(COLLECTIONS.CHARTS, 'month', settings.list.months);
+    const [is_loading_charts, charts, grouped_charts] = useFetch(COLLECTIONS.REDMINE, 'month', settings.list.months);
     const [is_showing_chart_builder, setIsShowingChartBuilder] = useState<boolean>(false);
     const [chart_builder_target, setChartBuilderTarget] = useState<TUniversalChart>();
     const [traceback, setTraceback] = useState<Array<number>>([]);
@@ -30,45 +30,51 @@ const ChartView = ({is_editable}: TChartView) => {
             [
                 {
                     type  : ChartType.Card,
-                    data  : [182],
-                    labels: ['Active pull requests'],
+                    data  : [70],
+                    labels: ['Picked Cards'],
                     color : ['#D1E9FC'],
                 },
                 {
                     type  : ChartType.Card,
-                    data  : [673],
-                    labels: ['Files changed'],
+                    data  : [27],
+                    labels: ['In Progress'],
                     color : ['#D0F2FF'],
                 },
                 {
                     type  : ChartType.Card,
-                    data  : [25660],
-                    labels: ['Added lines'],
+                    data  : [8],
+                    labels: ['Blocked Cards'],
+                    color : ['#968EB9'],
+                },
+                {
+                    type  : ChartType.Card,
+                    data  : [20],
+                    labels: ['Completed Cards'],
                     color : ['#FFF7CC'],
                 },
                 {
                     type  : ChartType.Card,
-                    data  : [18780],
-                    labels: ['Deleted lines'],
+                    data  : [15],
+                    labels: ['Released Cards'],
                     color : ['#FEE7D9'],
                 },
             ],
             [
                 {
                     type      : ChartType.Bar,
-                    data      : [27, 30, 39, 18, 15],
-                    labels    : ['1 day', '1 week', '2 weeks', '3-4 weeks', '> 4 weeks'],
+                    data      : [3, 7, 4, 1],
+                    labels    : ['First week', 'Second week', 'Third week', 'Fourth week'],
                     color     : ['#5287DA', '#5287DA', '#5287DA', '#5287DA', '#5287DA'],
-                    titleText : 'Title',
+                    titleText : 'Released Cards',
                     datalabels: {
                         display: false,
                     },
                 },
                 {
                     type      : ChartType.Doughnut,
-                    data      : [139, 43],
-                    labels    : ['Merged', 'Open'],
-                    color     : ['#968EB9', '#79A881'],
+                    data      : [8, 20, 15],
+                    color     : ['#968EB9', '#79A881', '#F2C94C'],
+                    labels    : ['Blocked', 'Completed', 'Released'],
                     datalabels: {
                         display: true,
                         color  : 'white',
@@ -92,7 +98,7 @@ const ChartView = ({is_editable}: TChartView) => {
                 console.log('ccc', charts);
                 if (!firestore_entry_id) {
                     console.log('creating');
-                    createRecord(COLLECTIONS.CHARTS, {
+                    createRecord(COLLECTIONS.REDMINE, {
                         json : JSON.stringify(content),
                         month: settings.date.month,
                         year : settings.date.year,
@@ -111,7 +117,7 @@ const ChartView = ({is_editable}: TChartView) => {
         pointer[traceback[traceback.length-1]] = new_value;
         setContent(new_state);
         window.localStorage.setItem('chartview', JSON.stringify(new_state));
-        updateRecord(COLLECTIONS.CHARTS, firestore_entry_id, {
+        updateRecord(COLLECTIONS.REDMINE, firestore_entry_id, {
             json : JSON.stringify(new_state),
             month: settings.date.month,
             year : settings.date.year,
@@ -196,4 +202,4 @@ const ChartView = ({is_editable}: TChartView) => {
     );
 };
 
-export default ChartView;
+export default RedmineUpdates;

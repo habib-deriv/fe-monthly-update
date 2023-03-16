@@ -4,7 +4,8 @@ import { useSelector } from 'react-redux';
 import domtoimage from 'dom-to-image';
 import FileSaver from 'file-saver';
 // import  Chart  from '@/components/charts';
-import ChartView from '@components/ChartView';
+import GithubUpdates from '@components/GithubUpdates';
+import RedmineUpdates from '@components/RedmineUpdates';
 import { COLLECTIONS } from '@/constants';
 import { Skeleton, Star, MonthSelector, EmptyList } from '@/components';
 import { useFetch } from '@/hooks';
@@ -129,13 +130,6 @@ const App = () => {
                         />
                     )}
 
-                    {/* Charts */}
-                    <div>
-                        <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
-                            Charts
-                        </span>
-                        <ChartView is_editable={true}/>
-                    </div>
                     {/* Tasks */}
                     {is_loading_tasks && <Skeleton row={2} />}
                     {!is_loading_tasks && has_items_in_month(tasks, settings.date.month) && grouped_tasks && (
@@ -242,6 +236,21 @@ const App = () => {
                             </div>
                         </div>
                     )}
+
+                    {/* Redmine */}
+                    <div>
+                        <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
+                            Redmine Updates
+                        </span>
+                        <RedmineUpdates is_editable={true}/>
+                    </div>
+                    {/* Github */}
+                    <div>
+                        <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
+                            Github Updates
+                        </span>
+                        <GithubUpdates is_editable={true}/>
+                    </div>
 
                     {/* Stars */}
                     {is_loading_stars && <Skeleton row={2} />}
