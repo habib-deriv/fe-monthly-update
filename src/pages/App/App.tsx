@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 import domtoimage from 'dom-to-image';
 import FileSaver from 'file-saver';
 // import  Chart  from '@/components/charts';
-import GithubUpdates from '@components/GithubUpdates';
 import RedmineUpdates from '@components/RedmineUpdates';
 import { COLLECTIONS } from '@/constants';
 import { Skeleton, Star, MonthSelector, EmptyList } from '@/components';
@@ -243,13 +242,6 @@ const App = () => {
                             Redmine Updates
                         </span>
                         <RedmineUpdates is_editable={true}/>
-                    </div>
-                    {/* Github */}
-                    <div>
-                        <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
-                            Github Updates
-                        </span>
-                        <GithubUpdates is_editable={true}/>
                     </div>
 
                     {/* Stars */}
