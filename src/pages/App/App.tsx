@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import classNames from "classnames";
+import 'material-icons/iconfont/material-icons.css';
+import RebrandingIcon from "@/assets/Vector.png";
 import { useSelector } from "react-redux";
 import domtoimage from "dom-to-image";
 import FileSaver from "file-saver";
@@ -14,6 +15,7 @@ import { TRootState } from "@/stores/store";
 // import { setIsDateChanged} from '@/stores/settings';
 import { capitalize, sendMonthlyUpdate, has_items_in_month } from "@/utils";
 import "./App.scss";
+import Logo from "@assets/deriv-logo.svg";
 
 const App = () => {
   // const dispatch = useDispatch<TAppDispatch>();
@@ -84,6 +86,35 @@ const App = () => {
     domtoimage.toBlob(el).then(function (blob) {
       FileSaver.saveAs(blob, imageFileName);
     });
+  };
+
+  const mdWrapper = (str: string) => {
+    return(
+        <div style={{
+          display     : 'inline-block',
+          fontSize    : 13,
+          fontFamily  : 'monospace',
+          background  : 'rgb(0,0,0,0.08)',
+          borderRadius: 4,
+          boxSizing   : 'border-box',
+          padding     : '0px 6px 0px',
+        }}
+        >
+          {str}
+        </div>
+    );
+  };
+
+  const toMdTest = (str: string) => {
+    const fragments = str.split('`');
+    const rendered_fragments = fragments.map((el, index) => {
+      if (index % 2 === 0) {
+        return el;
+      } else {
+        return mdWrapper(el);
+      }
+    });
+    return <>{rendered_fragments.map(el => <>{el} </> )}</>;
   };
 
   return (
@@ -162,30 +193,12 @@ const App = () => {
 
                         <div className="grid gap-4 grid-cols-2">
                           <div
-                            className={classNames("border-2 rounded-md", {
-                              "bg-gray-100 border-gray-200": !taskList(
-                                grouped_tasks[key],
-                                "achievement"
-                              ).length,
-                              "bg-green-100 border-green-200": taskList(
-                                grouped_tasks[key],
-                                "achievement"
-                              ).length,
-                            })}
+                            className="border-2 rounded-md bg-white border-white"
                           >
                             <div
-                              className={classNames("p-2", {
-                                "bg-gray-200 text-gray-500": !taskList(
-                                  grouped_tasks[key],
-                                  "achievement"
-                                ).length,
-                                "bg-green-200 text-black": taskList(
-                                  grouped_tasks[key],
-                                  "achievement"
-                                ).length,
-                              })}
+                              className="p-2 bg-white text-green-600"
                             >
-                              <span className="block text-center font-medium text-lg">
+                              <span className="block text-xl text-center font-medium text-lg">
                                 Accomplishments
                               </span>
                             </div>
@@ -194,7 +207,7 @@ const App = () => {
                                 (item: any, idx: number) => {
                                   return (
                                     <div key={idx} className="mb-3">
-                                      <p className="text-base font-medium mb-1">
+                                      <p className="text-base font-medium mb-4">
                                         {item.title}
                                       </p>
                                       <ul className="list-disc ml-4">
@@ -202,12 +215,16 @@ const App = () => {
                                           .split("|")
                                           .map((item: string, idx: number) => {
                                             return (
-                                              <li
-                                                key={idx}
-                                                className="text-sm mb-1"
-                                              >
-                                                {item.trim()}
-                                              </li>
+                                              <div className="flex gap-3 items-center pb-2">
+                                                {/*<span className="material-icons text-green-600">check</span>*/}
+                                                <img src={RebrandingIcon} alt="dRebranding" width="19" />
+                                                <li
+                                                    key={idx}
+                                                    className="text-sm list-none"
+                                                >
+                                                  {toMdTest(item.trim())}
+                                                </li>
+                                              </div>
                                             );
                                           })}
                                       </ul>
@@ -219,30 +236,12 @@ const App = () => {
                           </div>
 
                           <div
-                            className={classNames("border-2 rounded-md", {
-                              "bg-gray-100 border-gray-200": !taskList(
-                                grouped_tasks[key],
-                                "challenge"
-                              ).length,
-                              "bg-red-100 border-red-200": taskList(
-                                grouped_tasks[key],
-                                "challenge"
-                              ).length,
-                            })}
+                            className="border-2 rounded-md bg-white border-white"
                           >
                             <div
-                              className={classNames("p-2", {
-                                "bg-gray-200 text-gray-500": !taskList(
-                                  grouped_tasks[key],
-                                  "challenge"
-                                ).length,
-                                "bg-red-200 text-black": taskList(
-                                  grouped_tasks[key],
-                                  "challenge"
-                                ).length,
-                              })}
+                              className="p-2 bg-white border-white text-red-600"
                             >
-                              <span className="block text-center font-medium text-lg">
+                              <span className="block text-xl text-center font-medium text-lg">
                                 Challenges
                               </span>
                             </div>
@@ -251,7 +250,7 @@ const App = () => {
                                 (item: any, idx: number) => {
                                   return (
                                     <div key={idx} className="mb-3">
-                                      <p className="text-base font-medium mb-1">
+                                      <p className="text-base font-medium mb-4">
                                         {item.title}
                                       </p>
                                       <ul className="list-disc ml-4">
@@ -259,12 +258,15 @@ const App = () => {
                                           .split("|")
                                           .map((item: string, idx: number) => {
                                             return (
-                                              <li
-                                                key={idx}
-                                                className="text-sm mb-1"
-                                              >
-                                                {item.trim()}
-                                              </li>
+                                                <div className="flex gap-3 items-center pb-2">
+                                                  <span className="material-icons text-red-600 w-6">computer_rounded</span>
+                                                  <li
+                                                      key={idx}
+                                                      className="text-sm list-none"
+                                                  >
+                                                    {toMdTest(item.trim())}
+                                                  </li>
+                                                </div>
                                             );
                                           })}
                                       </ul>
