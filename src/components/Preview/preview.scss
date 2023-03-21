@@ -1,26 +1,46 @@
 .preview {
     &-star {
-        &__container {
-            min-height: 200px;
+        &__container{
+            display: flex;
+            inline-size: 100%;
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 24px, rgba(0, 0, 0, 0.08) 0px 24px 24px;
+            border-radius: 4px;
         }
-
-        &__image {
-            &__overlay {
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background-color: rgb(0 0 0 / 20%);
-            }
+        &__img{
+            width: 23rem;
+            height: 340px;
         }
-
-        &__title {
-            background-color: rgb(0 0 0 / 0.4);
+        &__achievements{
+            width: 50rem;
         }
-
-        &__achievements {
-            background-color: #FF444F;
+        &__title{
+            display: flex;
+            flex-direction: row;
+            -webkit-box-align: center;
+            align-items: center;
+            gap: 16px;
+            block-size: 36px;
+            align-self: stretch;
+            justify-content: space-between;
         }
+        &__team{
+            box-sizing: border-box;
+            display: flex;
+            background-color: #a6a8a9;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px 8px;
+            gap: 8px;
+            inline-size: auto;
+            block-size: 24px;
+            border: 1px solid rgb(153, 153, 153);
+            border-radius: 100px;
+        }
+        &__list-item{
+            color: #a19e9e;
+        }
+       
     }
+    
+    
 }
