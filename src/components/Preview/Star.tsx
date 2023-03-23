@@ -7,33 +7,36 @@ type TItem = {
 
 const Star = ({ item }: TItem) => {
   return (
-    <div className="preview-star__container">
-      <div
-        className="preview-star__img bg-cover"
-        style={{ backgroundImage: `url(${item.image})` }}
-      ></div>
+      <div className="wrapper">
+          <div className="clash-card barbarian">
+              <div className="clash-card__image clash-card__image--barbarian">
+                  <img src={item.image} alt="barbarian"/>
+              </div>
+              <div className="clash-card__unit-name">{item.name}</div>
+              <div className="clash-card__unit-description">
+                  {item.achievements}
+              </div>
 
-      <div className="preview-star__achievements__content flex flex-col p-4">
-        <div className="preview-star__title w-full rounded-bl-md">
-          <h1 className="text relative z-10 text-2xl font-bold p-4">
-            {item.name}
-          </h1>
-          <div className="preview-star__team text-white">{item.team}</div>
-        </div>
-        <ul className="list-disc ml-4 mt-4">
-          {item.achievements.split(" | ").map((item: string, idx: number) => {
-            return (
-              <li
-                key={idx}
-                className="preview-star__list-item text text-sm mb-2"
-              >
-                {item}
-              </li>
-            );
-          })}
-        </ul>
+              <div className="clash-card__unit-stats clash-card__unit-stats--barbarian clearfix">
+                  <div className="one-third">
+                      <div className="stat">{item.office}</div>
+                      <div className="stat-value">office</div>
+                  </div>
+
+                  <div className="one-third">
+                      <div className="stat">FE</div>
+                      <div className="stat-value">{item.team}</div>
+                  </div>
+
+                  <div className="one-third no-border">
+                      <div className="stat">Project</div>
+                      <div className="stat-value">Cost</div>
+                  </div>
+
+              </div>
+
+          </div>
       </div>
-    </div>
   );
 };
 

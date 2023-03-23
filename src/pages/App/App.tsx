@@ -301,7 +301,7 @@ const App = () => {
                   Stars of the month
                 </span>
                 <div className="card-section">
-                  <div className="grid star-container">
+                  <div className="flex flex-wrap star-container">
                     {grouped_stars[settings.date.month].map((star, idx) => {
                       return <Star key={idx} item={star} />;
                     })}
