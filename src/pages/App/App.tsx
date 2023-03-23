@@ -177,7 +177,7 @@ const App = () => {
             grouped_tasks && (
               <div>
                 <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
-                  Tasks
+                  What we did last month
                 </span>
 
                 <div>

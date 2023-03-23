@@ -17,22 +17,16 @@ const Star = ({ item }: TItem) => {
                   {item.achievements}
               </div>
 
-              <div className="clash-card__unit-stats clash-card__unit-stats--barbarian clearfix">
+              <div className={`clash-card__unit-stats clash-card__unit-stats--${item.color} clearfix`}>
                   <div className="one-third">
                       <div className="stat">{item.office}</div>
                       <div className="stat-value">office</div>
                   </div>
 
-                  <div className="one-third">
+                  <div className="one-third no-border">
                       <div className="stat">FE</div>
                       <div className="stat-value">{item.team}</div>
                   </div>
-
-                  <div className="one-third no-border">
-                      <div className="stat">Project</div>
-                      <div className="stat-value">Cost</div>
-                  </div>
-
               </div>
 
           </div>
