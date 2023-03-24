@@ -168,7 +168,7 @@ const App = () => {
         <div
           // @ts-ignore
           ref={exportRef}
-          className="py-4 bg-white"
+          className="bg-white"
         >
           {/* Empty List */}
           {!is_loading_tasks &&
@@ -194,8 +194,8 @@ const App = () => {
               {summary &&
                 summary.map((item) => {
                   return (
-                    <div className="block p-4 my-4">
-                      <span className="block text-center font-normal text-lt">
+                    <div className="block summary">
+                      <span className="block text-center font-3 text-lt">
                         {item.description}
                       </span>
                     </div>
