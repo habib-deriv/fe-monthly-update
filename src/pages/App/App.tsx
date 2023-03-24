@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import 'material-icons/iconfont/material-icons.css';
+import "material-icons/iconfont/material-icons.css";
 import RebrandingIcon from "@/assets/Vector.png";
 import { useSelector } from "react-redux";
 import domtoimage from "dom-to-image";
@@ -15,7 +15,7 @@ import { TRootState } from "@/stores/store";
 // import { setIsDateChanged} from '@/stores/settings';
 import { capitalize, sendMonthlyUpdate, has_items_in_month } from "@/utils";
 import "./App.scss";
-import Logo from "@assets/deriv-logo.svg";
+import BackgroundImg from "@/assets/bg_img.png";
 
 const App = () => {
   // const dispatch = useDispatch<TAppDispatch>();
@@ -30,6 +30,7 @@ const App = () => {
     "week",
     settings.list.weeks
   );
+  const [is_loading_summary, summary] = useFetch(COLLECTIONS.SUMMARY);
   const [is_road_empty, setIsRoadEmpty] = useState(false);
   const [is_loading_road, road] = useFetch(COLLECTIONS.ROADMAP);
   // const [filtered_repositories, setFilteredRepositories] = useState<[string, TData][]>(Object.keys(charts.stats).length > 0 ? [Object.entries(charts.stats)[0]] : []);
@@ -89,24 +90,25 @@ const App = () => {
   };
 
   const mdWrapper = (str: string) => {
-    return(
-        <div style={{
-          display     : 'inline-block',
-          fontSize    : 13,
-          fontFamily  : 'monospace',
-          background  : 'rgb(0,0,0,0.08)',
+    return (
+      <div
+        style={{
+          display: "inline-block",
+          fontSize: 13,
+          fontFamily: "monospace",
+          background: "rgb(0,0,0,0.08)",
           borderRadius: 4,
-          boxSizing   : 'border-box',
-          padding     : '0px 6px 0px',
+          boxSizing: "border-box",
+          padding: "0px 6px 0px",
         }}
-        >
-          {str}
-        </div>
+      >
+        {str}
+      </div>
     );
   };
 
   const toMdTest = (str: string) => {
-    const fragments = str.split('`');
+    const fragments = str.split("`");
     const rendered_fragments = fragments.map((el, index) => {
       if (index % 2 === 0) {
         return el;
@@ -114,7 +116,13 @@ const App = () => {
         return mdWrapper(el);
       }
     });
-    return <>{rendered_fragments.map(el => <>{el} </> )}</>;
+    return (
+      <>
+        {rendered_fragments.map((el) => (
+          <>{el} </>
+        ))}
+      </>
+    );
   };
 
   return (
@@ -170,6 +178,32 @@ const App = () => {
               <EmptyList title="This month is Empty" has_description={false} />
             )}
 
+          <div className="flex background-img justify-center p-4">
+            <span className="block text-5xl font-bold text-white text-center tracking-widest p-4 my-4">
+              FE Monthly Update - Mar 2023
+            </span>
+          </div>
+
+          {/* Summary */}
+          {is_loading_summary && <Skeleton row={1} />}
+          {!is_loading_summary && (
+            <div>
+              <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
+                Summary
+              </span>
+              {summary &&
+                summary.map((item) => {
+                  return (
+                    <div className="block p-4 my-4">
+                      <span className="block text-center font-normal text-lt">
+                        {item.description}
+                      </span>
+                    </div>
+                  );
+                })}
+            </div>
+          )}
+
           {/* Tasks */}
           {is_loading_tasks && <Skeleton row={2} />}
           {!is_loading_tasks &&
@@ -192,12 +226,8 @@ const App = () => {
                         </span>
 
                         <div className="grid gap-4 grid-cols-2">
-                          <div
-                            className="border-2 rounded-md bg-white border-white"
-                          >
-                            <div
-                              className="p-2 bg-white text-green-600"
-                            >
+                          <div className="border-2 rounded-md bg-white border-white">
+                            <div className="p-2 bg-white text-green-600">
                               <span className="block text-xl text-center font-medium text-lg">
                                 Accomplishments
                               </span>
@@ -217,10 +247,14 @@ const App = () => {
                                             return (
                                               <div className="flex gap-3 items-center pb-2">
                                                 {/*<span className="material-icons text-green-600">check</span>*/}
-                                                <img src={RebrandingIcon} alt="dRebranding" width="19" />
+                                                <img
+                                                  src={RebrandingIcon}
+                                                  alt="dRebranding"
+                                                  width="19"
+                                                />
                                                 <li
-                                                    key={idx}
-                                                    className="text-sm list-none"
+                                                  key={idx}
+                                                  className="text-sm list-none"
                                                 >
                                                   {toMdTest(item.trim())}
                                                 </li>
@@ -235,12 +269,8 @@ const App = () => {
                             </div>
                           </div>
 
-                          <div
-                            className="border-2 rounded-md bg-white border-white"
-                          >
-                            <div
-                              className="p-2 bg-white border-white text-red-600"
-                            >
+                          <div className="border-2 rounded-md bg-white border-white">
+                            <div className="p-2 bg-white border-white text-red-600">
                               <span className="block text-xl text-center font-medium text-lg">
                                 Challenges
                               </span>
@@ -258,15 +288,17 @@ const App = () => {
                                           .split("|")
                                           .map((item: string, idx: number) => {
                                             return (
-                                                <div className="flex gap-3 items-center pb-2">
-                                                  <span className="material-icons text-red-600 w-6">computer_rounded</span>
-                                                  <li
-                                                      key={idx}
-                                                      className="text-sm list-none"
-                                                  >
-                                                    {toMdTest(item.trim())}
-                                                  </li>
-                                                </div>
+                                              <div className="flex gap-3 items-center pb-2">
+                                                <span className="material-icons text-red-600 w-6">
+                                                  computer_rounded
+                                                </span>
+                                                <li
+                                                  key={idx}
+                                                  className="text-sm list-none"
+                                                >
+                                                  {toMdTest(item.trim())}
+                                                </li>
+                                              </div>
                                             );
                                           })}
                                       </ul>

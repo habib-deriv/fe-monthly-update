@@ -13,6 +13,22 @@ $stage2 : #79c2fa;
 $stage3 : #968EB9;
 $stage4 : #79A881;
 
+.header-text{
+    background: #00296b;
+    width: 1024px;
+
+}
+.background-img{
+        display: flex;
+        justify-content: center;
+        background-image: url(@/assets/bg_img.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 1024px;
+        height: 400px;
+   
+}
 //Start of the month
 
 .star {
@@ -95,7 +111,7 @@ $stage4 : #79A881;
     align-items: center;
     justify-content: center;
     width: 250px;
-    height: 100px;
+    height: 300px;
     margin: 40px 0;
     padding: 20px;
     border-radius: 12px;
