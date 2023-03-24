@@ -13,11 +13,13 @@ $stage2 : #79c2fa;
 $stage3 : #968EB9;
 $stage4 : #79A881;
 
-.header-text{
-    background: #00296b;
-    width: 1024px;
-
+.main-header{
+    font-size: 38px;
+    width: 280px;
+    margin-top: 50px;
+    letter-spacing: 2px;
 }
+
 .background-img{
         display: flex;
         justify-content: center;
@@ -63,7 +65,7 @@ $stage4 : #79A881;
     
 }
 .table-head{
-    width: 250px;
+    width: 200px;
     height: 50px;
     &:nth-child(1){
         background: #{$stage1};
@@ -110,7 +112,7 @@ $stage4 : #79A881;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 250px;
+    width: 200px;
     height: 300px;
     margin: 40px 0;
     padding: 20px;

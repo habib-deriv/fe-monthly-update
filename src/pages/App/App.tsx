@@ -168,7 +168,7 @@ const App = () => {
         <div
           // @ts-ignore
           ref={exportRef}
-          className="py-4 px-1 bg-white"
+          className="py-4 bg-white"
         >
           {/* Empty List */}
           {!is_loading_tasks &&
@@ -178,9 +178,9 @@ const App = () => {
               <EmptyList title="This month is Empty" has_description={false} />
             )}
 
-          <div className="flex background-img justify-center p-4">
-            <span className="block text-5xl font-bold text-white text-center tracking-widest p-4 my-4">
-              FE Monthly Update - Mar 2023
+          <div className="flex background-img justify-start p-4">
+            <span className="block main-header font-bold text-white p-4">
+              FE Monthly Update Newsletter -Mar 2023
             </span>
           </div>
 
@@ -346,7 +346,7 @@ const App = () => {
           {!is_loading_road && !is_road_empty && (
             <div className="road-ahead-container">
               <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 mt-12 mb-4">
-                Road Ahead
+                What's next?
               </span>
               <table>
                 <tr className="table-row-header">
