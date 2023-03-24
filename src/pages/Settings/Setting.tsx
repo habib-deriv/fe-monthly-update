@@ -12,7 +12,7 @@ const Settings = () => {
     };
 
     return (
-        <div className="py-10 w-96 mx-auto">
+        <div className="py-10 w-96 mx-auto max-w-5xl">
             <div className="flex items-center justify-between mb-2">
                 <h3 className="uppercase text-lg font-bold">Settings</h3>
                 <div className="flex items-center justify-end"></div>

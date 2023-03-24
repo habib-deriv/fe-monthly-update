@@ -28,13 +28,11 @@ $stage4 : #79A881;
 .star-container {
     display: grid;
     block-size: 100%;
-    width: 60rem;
-    margin: 0px 16px;
+    width: 64rem;
     grid-template-rows: auto;
     gap: 40px 24px;
     align-items: start;
     justify-items: unset;
-
 }
 .road-ahead-container{
     display: flex;

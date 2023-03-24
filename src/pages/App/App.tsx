@@ -118,9 +118,9 @@ const App = () => {
   };
 
   return (
-    <div className="app-hero p-10">
+    <div className="app-hero py-10 px-0">
       <React.Fragment>
-        <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center justify-between mb-2 px-1">
           <div className="flex items-center justify-start basis-1/3">
             <h3 className="text-2xl font-bold mr-2">Overview</h3>
             <Chip
@@ -301,7 +301,7 @@ const App = () => {
                   Stars of the month
                 </span>
                 <div className="card-section">
-                  <div className="flex flex-wrap star-container">
+                  <div className="flex flex-wrap justify-center star-container">
                     {grouped_stars[settings.date.month].map((star, idx) => {
                       return <Star key={idx} item={star} />;
                     })}

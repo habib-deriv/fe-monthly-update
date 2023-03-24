@@ -10,7 +10,7 @@ const DefaultLayout = ({ children }: TLayoutProps) => {
   return (
     <React.Fragment>
       <AppBar position="static" classes={{ root: "bg-gray-100" }}>
-        <Toolbar className="container mx-auto p-0">
+        <Toolbar className="container mx-auto max-w-5xl p-0">
           <img className="w-8 mr-2" src={Logo} alt="Deriv" />
           <div className="flex-grow">
             <Typography
@@ -77,7 +77,7 @@ const DefaultLayout = ({ children }: TLayoutProps) => {
         </Toolbar>
       </AppBar>
 
-      <div className="container mx-auto main-content">{children}</div>
+      <div className="container mx-auto max-w-5xl main-content">{children}</div>
 
       <div id="modal-portal"></div>
       <footer className="text-center p-4 bg-black text-base-content">
