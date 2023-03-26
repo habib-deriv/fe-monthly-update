@@ -220,7 +220,7 @@ const App = () => {
                   {Object.keys(grouped_tasks).map((key) => {
                     return (
                       <div
-                        className="block bg-gradient-to-t from-slate-200 to-slate-100 drop-shadow-lg rounded-md p-4 mb-8"
+                        className="block bg-gradient-to-t from-slate-200 to-slate-100 drop-shadow-lg rounded-md p-4 mb-8 bg-red-sh"
                         key={key}
                       >
                         <span className="block text-lg font-medium text-black text-center tracking-wide mb-4">
