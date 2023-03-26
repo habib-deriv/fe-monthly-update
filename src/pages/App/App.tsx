@@ -179,7 +179,7 @@ const App = () => {
               <EmptyList title="This month is Empty" has_description={false} />
             )}
 
-          <div className="flex background-img justify-start p-4">
+          <div className="flex background-img justify-start p-4 banner-content">
             <span className="block main-header font-bold text-white p-4 rightous-font">
               FE Monthly Report March 2023
             </span>
