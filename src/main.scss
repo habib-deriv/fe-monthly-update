@@ -2,11 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Righteous&display=swap');
+
 #root .tracking-widest {
+    font-family: 'Righteous', cursive;
     letter-spacing: 0.025em !important;
     background: #ff444f;
     color: white;
     width: 100%;
+}
+
+.rightous-font{
+    font-family: 'Righteous', cursive;
 }
 
 .main {

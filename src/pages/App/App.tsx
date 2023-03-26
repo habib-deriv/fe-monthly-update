@@ -180,8 +180,8 @@ const App = () => {
             )}
 
           <div className="flex background-img justify-start p-4">
-            <span className="block main-header font-bold text-white p-4">
-              FE Monthly Update Newsletter -Mar 2023
+            <span className="block main-header font-bold text-white p-4 rightous-font">
+              FE Monthly Report March 2023
             </span>
           </div>
 
@@ -256,7 +256,7 @@ const App = () => {
                                                 />
                                                 <li
                                                   key={idx}
-                                                  className="text-sm list-none"
+                                                  className="text-md list-none"
                                                 >
                                                   {toMdTest(item.trim())}
                                                 </li>
@@ -296,7 +296,7 @@ const App = () => {
                                                 </span>
                                                 <li
                                                   key={idx}
-                                                  className="text-sm list-none"
+                                                  className="text-md list-none"
                                                 >
                                                   {toMdTest(item.trim())}
                                                 </li>
