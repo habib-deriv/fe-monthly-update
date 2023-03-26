@@ -174,7 +174,6 @@ const RedmineUpdates = ({is_editable}: TChartView) => {
         !is_loading_charts ?
             <>
                 <div style={{
-                    marginTop      : 40,
                     backgroundColor: '#f8f8f8',
                     borderRadius   : 40,
                     padding        : 40,

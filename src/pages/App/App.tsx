@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "material-icons/iconfont/material-icons.css";
-import RebrandingIcon from "@/assets/Vector.png";
+import Tick from "@/assets/tick.png";
+import RebrandingIcon from "@/assets/vector.png";
 import { useSelector } from "react-redux";
 import domtoimage from "dom-to-image";
 import FileSaver from "file-saver";
@@ -134,7 +135,6 @@ const App = () => {
             <Chip
               label={capitalize(settings.date.month)}
               size="small"
-              color="primary"
               variant="outlined"
             />
           </div>
@@ -187,9 +187,10 @@ const App = () => {
           {/* Summary */}
           {is_loading_summary && <Skeleton row={1} />}
           {!is_loading_summary && (
-            <div>
+            <div className="width90">
               <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
-                Summary
+                
+                Welcome to Frontend monthly report
               </span>
               {summary &&
                 summary.map((item) => {
@@ -214,7 +215,7 @@ const App = () => {
                   What we did last month
                 </span>
 
-                <div>
+                <div className="width90">
                   {Object.keys(grouped_tasks).map((key) => {
                     return (
                       <div
@@ -248,7 +249,7 @@ const App = () => {
                                               <div className="flex gap-3 items-center pb-2">
                                                 {/*<span className="material-icons text-green-600">check</span>*/}
                                                 <img
-                                                  src={RebrandingIcon}
+                                                  src={Tick}
                                                   alt="dRebranding"
                                                   width="19"
                                                 />
@@ -317,7 +318,7 @@ const App = () => {
             )}
 
           {/* Redmine */}
-          <div>
+          <div className="width90">
             <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
               Redmine Updates
             </span>
@@ -329,7 +330,7 @@ const App = () => {
           {!is_loading_stars &&
             has_items_in_month(stars, settings.date.month) && (
               <>
-                <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 mt-12 mb-4">
+                <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 mt-5">
                   Stars of the month
                 </span>
                 <div className="card-section">
@@ -344,8 +345,8 @@ const App = () => {
           {/* Road */}
           {is_loading_road && <Skeleton row={2} />}
           {!is_loading_road && !is_road_empty && (
-            <div className="road-ahead-container">
-              <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 mt-12 mb-4">
+            <div className="road-ahead-container width90">
+              <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 mt-5 mb-5">
                 What's next?
               </span>
               <table>

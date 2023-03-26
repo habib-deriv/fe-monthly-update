@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import Logo from "@/assets/deriv-logo.svg";
+import Logo from "@/assets/vector.png";
 import { Button, AppBar, Toolbar, Typography } from "@mui/material";
 import { TLayoutProps } from ".";
 
@@ -83,7 +83,7 @@ const DefaultLayout = ({ children }: TLayoutProps) => {
       <footer className="text-center p-4 bg-black text-base-content">
         <div>
           <p className="text-white text-xs">
-            Copyright © 2022 - 23 - All right reserved by Cashier Team
+            Copyright © 2022 - 23 - All right reserved by Cashier and Webpage Team
           </p>
         </div>
       </footer>

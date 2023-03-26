@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#root .tracking-widest {
+    letter-spacing: 0.025em !important;
+}
+
 .main {
     &-content {
         min-height: calc(100vh - 64px - 48px);
