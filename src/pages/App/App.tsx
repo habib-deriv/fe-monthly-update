@@ -131,11 +131,12 @@ const App = () => {
       <React.Fragment>
         <div className="flex items-center justify-between mb-2 px-1">
           <div className="flex items-center justify-start basis-1/3">
-            <h3 className="text-2xl font-bold mr-2">Overview</h3>
+            <h3 className="text-2xl font-bold mr-2 color-white">Overview</h3>
             <Chip
               label={capitalize(settings.date.month)}
               size="small"
               variant="outlined"
+              color="warning"
             />
           </div>
           <div className="flex items-center justify-end">
@@ -187,7 +188,7 @@ const App = () => {
           {/* Summary */}
           {is_loading_summary && <Skeleton row={1} />}
           {!is_loading_summary && (
-            <div className="width90">
+            <div className="mt-ng20">
               <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
                 
                 Welcome to Frontend monthly report
@@ -195,7 +196,7 @@ const App = () => {
               {summary &&
                 summary.map((item) => {
                   return (
-                    <div className="block summary">
+                    <div className="block summary width90">
                       <span className="block text-center font-3 text-lt">
                         {item.description}
                       </span>
@@ -318,11 +319,13 @@ const App = () => {
             )}
 
           {/* Redmine */}
-          <div className="width90">
+          <div className="">
             <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
               Redmine Updates
             </span>
-            <RedmineUpdates is_editable={true} />
+            <div className="width90">
+              <RedmineUpdates is_editable={true} />
+            </div>
           </div>
 
           {/* Stars */}
@@ -345,11 +348,11 @@ const App = () => {
           {/* Road */}
           {is_loading_road && <Skeleton row={2} />}
           {!is_loading_road && !is_road_empty && (
-            <div className="road-ahead-container width90">
-              <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 mt-5 mb-5">
+            <div className="road-ahead-container">
+              <div className="block text-2xl font-medium text-black text-center tracking-widest p-4 mt-5 mb-5">
                 What's next?
-              </span>
-              <table>
+              </div>
+              <table className="width90">
                 <tr className="table-row-header">
                   <th className="table-head text-white text-center">Stage 1</th>
                   <th className="table-head text-white">Stage 2</th>
