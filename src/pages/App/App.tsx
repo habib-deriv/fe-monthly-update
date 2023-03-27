@@ -206,6 +206,16 @@ const App = () => {
             </div>
           )}
 
+          {/* Redmine */}
+          <div className="">
+            <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
+              Redmine Updates
+            </span>
+            <div className="width90">
+              <RedmineUpdates is_editable={true} />
+            </div>
+          </div>
+
           {/* Tasks */}
           {is_loading_tasks && <Skeleton row={2} />}
           {!is_loading_tasks &&
@@ -317,16 +327,6 @@ const App = () => {
                 </div>
               </div>
             )}
-
-          {/* Redmine */}
-          <div className="">
-            <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
-              Redmine Updates
-            </span>
-            <div className="width90">
-              <RedmineUpdates is_editable={true} />
-            </div>
-          </div>
 
           {/* Stars */}
           {is_loading_stars && <Skeleton row={2} />}
