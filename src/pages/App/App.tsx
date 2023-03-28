@@ -190,8 +190,7 @@ const App = () => {
           {!is_loading_summary && (
             <div className="mt-ng20">
               <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
-                
-                Welcome to Frontend monthly report
+                Frontend monthly report
               </span>
               {summary &&
                 summary.map((item) => {
