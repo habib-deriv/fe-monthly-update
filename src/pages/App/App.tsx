@@ -213,7 +213,7 @@ const App = () => {
               Improving Performance: A summary of achievements and future plans
             </span>
             <div className="width90">
-            <span className="block text-md font-normal text-black text-center p-4 my-4">
+            <span className="block text-md font-normal text-black text-justify p-4 my-4">
               We've been working hard to improve the performance of Deriv.com
               and App.deriv.com. We've already achieved great results with FID
               and CLS, but we're still working on improving LCP. We recently
@@ -231,7 +231,7 @@ const App = () => {
                 src={OverviewImg}
                 alt="performance update"
               />
-              <span className="block text-md font-normal text-black text-center p-4 my-4">
+              <span className="block text-md font-normal text-black text-justify p-4 my-4">
                 Last month, we improved Image compression and were able to bring
                 down LCP considerably on desktop. From 60.31% of our clients
                 being in good zone, we moved to 75.47% (screenshot attached)
