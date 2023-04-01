@@ -210,9 +210,10 @@ const App = () => {
           {/* Redmine */}
           <div className="">
             <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
-            Improving Performance: A summary of achievements and future plans
+              Improving Performance: A summary of achievements and future plans
             </span>
-            <span className="block text-sm font-normal text-black text-center p-4 my-4">
+            <div className="width90">
+            <span className="block text-md font-normal text-black text-center p-4 my-4">
               We've been working hard to improve the performance of Deriv.com
               and App.deriv.com. We've already achieved great results with FID
               and CLS, but we're still working on improving LCP. We recently
@@ -222,14 +223,22 @@ const App = () => {
               improvements.
               <br />
               <br />
-              Besides, we are also focused on enhancing the performance of our default UI of Deriv App, Trader's Hub, and Dtrader.
+              Besides, we are also focused on enhancing the performance of our
+              default UI of Deriv App, Trader's Hub, and Dtrader.
             </span>
-            <div className="width90">
               <img
                 className="performance-update"
                 src={OverviewImg}
                 alt="performance update"
               />
+              <span className="block text-md font-normal text-black text-center p-4 my-4">
+                Last month, we improved Image compression and were able to bring
+                down LCP considerably on desktop. From 60.31% of our clients
+                being in good zone, we moved to 75.47% (screenshot attached)
+                However, these improvements are not highly visible on mobile
+                devices, due to various reasons including low bandwidth
+                networks.
+              </span>
               <img
                 className="performance-update"
                 src={PerformanceImg}
