@@ -213,19 +213,17 @@ const App = () => {
               Improving Performance: A summary of achievements and future plans
             </span>
             <div className="width90">
-            <span className="block text-md font-normal text-black text-justify p-4 my-4">
-              We've been working hard to improve the performance of Deriv.com
-              and App.deriv.com. We've already achieved great results with FID
-              and CLS, but we're still working on improving LCP. We recently
-              improved image compression on desktop, but we're still working on
-              mobile devices. Our rebranded design, upcoming refactoring and
-              Gatsby updates will further contribute to the performance
-              improvements.
-              <br />
-              <br />
-              Besides, we are also focused on enhancing the performance of our
-              default UI of Deriv App, Trader's Hub, and DTrader.
-            </span>
+              <span className="block text-md font-normal text-black text-justify p-4 my-4">
+                We've been working hard to improve the performance of Deriv.com. We've already achieved great results with FID and CLS, but
+                we're still working on improving LCP. We recently improved image
+                compression on desktop, but we're still working on mobile
+                devices. Our rebranded design, upcoming refactoring and Gatsby
+                updates will further contribute to the performance improvements.
+                <br />
+                <br />
+                Besides, we are also focused on enhancing the performance of our
+                default UI of Deriv App, Trader's Hub, and DTrader.
+              </span>
               <img
                 className="performance-update"
                 src={OverviewImg}
