@@ -17,6 +17,8 @@ import { TRootState } from "@/stores/store";
 import { capitalize, sendMonthlyUpdate, has_items_in_month } from "@/utils";
 import "./App.scss";
 import BackgroundImg from "@/assets/bg_img.png";
+import PerformanceImg from "@/assets/performance.png";
+import OverviewImg from "@/assets/overview.png";
 
 const App = () => {
   // const dispatch = useDispatch<TAppDispatch>();
@@ -208,10 +210,32 @@ const App = () => {
           {/* Redmine */}
           <div className="">
             <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
-              Redmine Updates
+            Improving Performance: A summary of achievements and future plans
+            </span>
+            <span className="block text-sm font-normal text-black text-center p-4 my-4">
+              We've been working hard to improve the performance of Deriv.com
+              and App.deriv.com. We've already achieved great results with FID
+              and CLS, but we're still working on improving LCP. We recently
+              improved image compression on desktop, but we're still working on
+              mobile devices. Our rebranded design, upcoming refactoring and
+              Gatsby updates will further contribute to the performance
+              improvements.
+              <br />
+              <br />
+              Besides, we are also focused on enhancing the performance of our default UI of Deriv App, Trader's Hub, and Dtrader.
             </span>
             <div className="width90">
-              <RedmineUpdates is_editable={true} />
+              <img
+                className="performance-update"
+                src={OverviewImg}
+                alt="performance update"
+              />
+              <img
+                className="performance-update"
+                src={PerformanceImg}
+                alt="performance update"
+              />
+              {/* <RedmineUpdates is_editable={true} /> */}
             </div>
           </div>
 
