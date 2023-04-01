@@ -224,7 +224,7 @@ const App = () => {
               <br />
               <br />
               Besides, we are also focused on enhancing the performance of our
-              default UI of Deriv App, Trader's Hub, and Dtrader.
+              default UI of Deriv App, Trader's Hub, and DTrader.
             </span>
               <img
                 className="performance-update"
