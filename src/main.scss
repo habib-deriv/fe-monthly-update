@@ -2,18 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Righteous&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Righteous&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 #root .tracking-widest {
-    font-family: 'Righteous', cursive;
+    font-family: 'Josefin Sans', sans-serif;
     letter-spacing: 0.025em !important;
     background: #ff444f;
     color: white;
     width: 100%;
+    font-weight: 700;
 }
 
 .rightous-font{
-    font-family: 'Righteous', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
 }
 
 .main {
