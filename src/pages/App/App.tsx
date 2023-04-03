@@ -218,14 +218,16 @@ const App = () => {
             </span>
             <div className="width90">
               <span className="block text-md font-normal text-black text-justify p-4 my-4">
-                We've been working hard to improve the performance of Deriv.com. We've already achieved great results with FID and CLS, but
-                we're still working on improving LCP. We recently improved image
+                We've been working hard to improve the performance of Deriv.com.
+                We've already achieved great results with FID and CLS, but we're
+                still working on improving LCP. We recently improved image
                 compression on desktop, but we're still working on mobile
                 devices. Our rebranded design, upcoming refactoring and Gatsby
                 updates will further contribute to the performance improvements.
                 <br />
                 <br />
-                Besides, we are also focused on enhancing the performance of Trader's Hub and DTrader.
+                Besides, we are also focused on enhancing the performance of
+                Trader's Hub and DTrader.
               </span>
               <img
                 className="performance-update"
@@ -388,7 +390,9 @@ const App = () => {
               <table className="width90 text-sm">
                 <tr className="table-row-header">
                   <tr>
-                    <th className="table-head text-white text-center">Deriv.com</th>
+                    <th className="table-head text-white text-center">
+                      Deriv.com
+                    </th>
                     <td className="table-data">
                       <ul className="list-disc">
                         {com.map((item) => {
@@ -398,7 +402,9 @@ const App = () => {
                     </td>
                   </tr>
                   <tr>
-                    <th className="table-head text-white text-center">Deriv App</th>
+                    <th className="table-head text-white text-center">
+                      Deriv App
+                    </th>
                     <td className="table-data">
                       <ul className="list-disc">
                         {app.map((item) => {
@@ -418,7 +424,9 @@ const App = () => {
                     </td>
                   </tr>
                   <tr>
-                    <th className="table-head text-white text-center">Wallets/Cashier</th>
+                    <th className="table-head text-white text-center">
+                      Wallets/Cashier
+                    </th>
                     <td className="table-data">
                       <ul className="list-disc">
                         {cashier.map((item) => {
@@ -431,6 +439,9 @@ const App = () => {
               </table>
             </div>
           )}
+          <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
+          Join the decentralized revolution and unlock the potential of cryptocurrency today
+          </span>
         </div>
       </React.Fragment>
     </div>
