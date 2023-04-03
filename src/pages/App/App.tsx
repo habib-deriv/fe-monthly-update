@@ -198,7 +198,7 @@ const App = () => {
                 summary.map((item) => {
                   return (
                     <div className="block summary width90">
-                      <span className="block text-center font-3 text-lt">
+                      <span className="block text-justify font-3 text-lt">
                         {item.description}
                       </span>
                     </div>
