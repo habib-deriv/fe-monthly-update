@@ -397,7 +397,7 @@ const App = () => {
                     </td>
                   </tr>
                   <tr>
-                    <th className="table-head text-white text-center">Trading team</th>
+                    <th className="table-head text-white text-center">Deriv App</th>
                     <td className="table-data">
                       <ul className="list-disc">
                         <li className="p-1">New contract type - Turbos</li>
@@ -408,7 +408,7 @@ const App = () => {
                     </td>
                   </tr>
                   <tr>
-                    <th className="table-head text-white text-center">Deriv app</th>
+                    <th className="table-head text-white text-center">Bots</th>
                     <td className="table-data">
                       <ul className="list-disc">
                         <li className="p-1">Deriv branding on app.deriv.com</li>
@@ -416,7 +416,7 @@ const App = () => {
                     </td>
                   </tr>
                   <tr>
-                    <th className="table-head text-white text-center">Cashier</th>
+                    <th className="table-head text-white text-center">Wallets/Cashier</th>
                     <td className="table-data">
                       <ul className="list-disc">
                         <li className="p-1">Fiat cashier (Doughflow) dark mode</li>
