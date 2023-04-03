@@ -385,7 +385,7 @@ const App = () => {
               <div className="block text-2xl font-medium text-black text-center tracking-widest p-4 mt-5 mb-5">
                 What's next?
               </div>
-              <table className="width90">
+              <table className="width90 text-sm">
                 <tr className="table-row-header">
                   <tr>
                     <th className="table-head text-white text-center">Deriv.com</th>
