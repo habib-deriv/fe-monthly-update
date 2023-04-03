@@ -135,10 +135,10 @@ $stage4 : #79A881;
 }
 .table-data{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 200px;
-    height: 300px;
+    height: 400px;
     margin: 40px 0;
     padding: 20px;
     border-radius: 12px;
