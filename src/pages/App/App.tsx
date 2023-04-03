@@ -221,8 +221,7 @@ const App = () => {
                 updates will further contribute to the performance improvements.
                 <br />
                 <br />
-                Besides, we are also focused on enhancing the performance of our
-                default UI of Deriv App, Trader's Hub, and DTrader.
+                Besides, we are also focused on enhancing the performance of Trader's Hub and DTrader.
               </span>
               <img
                 className="performance-update"
