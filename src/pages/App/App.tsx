@@ -383,15 +383,45 @@ const App = () => {
               </div>
               <table className="width90">
                 <tr className="table-row-header">
-                  <th className="table-head text-white text-center">Stage 1</th>
-                  <th className="table-head text-white">Stage 2</th>
-                  <th className="table-head text-white">Stage 3</th>
-                  <th className="table-head text-white">Stage 4</th>
-                </tr>
-                <tr className="table-row-header">
-                  {road.map((item) => {
-                    return <Road item={item.title} />;
-                  })}
+                  <tr>
+                    <th className="table-head text-white text-center">Deriv.com</th>
+                    <td className="table-data">
+                      <ul className="list-disc">
+                        <li className="p-1">Rebranding Deriv.com</li>
+                        <li className="p-1">Backend CMS dashboard for Deriv.com (BFF)</li>
+                        <li className="p-1">E2E test benchmark</li>
+                        <li className="p-1">React profiler on projects</li>
+                        <li className="p-1">React 18 on deriv-com</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th className="table-head text-white text-center">Trading team</th>
+                    <td className="table-data">
+                      <ul className="list-disc">
+                        <li className="p-1">New contract type - Turbos</li>
+                        <li className="p-1">New contract type - Vanilla on Financial</li>
+                        <li className="p-1">Revamping MT5 jurisdiction modal UI for better user experience</li>
+                        <li className="p-1">Implementation of SwapFree, cTrader and DerivEZ on Trader’s hub dashboard</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th className="table-head text-white text-center">Deriv app</th>
+                    <td className="table-data">
+                      <ul className="list-disc">
+                        <li className="p-1">Deriv branding on app.deriv.com</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th className="table-head text-white text-center">Cashier</th>
+                    <td className="table-data">
+                      <ul className="list-disc">
+                        <li className="p-1">Fiat cashier (Doughflow) dark mode</li>
+                      </ul>
+                    </td>
+                  </tr>
                 </tr>
               </table>
             </div>
