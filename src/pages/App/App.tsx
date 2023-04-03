@@ -8,7 +8,7 @@ import FileSaver from "file-saver";
 // import  Chart  from '@/components/charts';
 import RedmineUpdates from "@components/RedmineUpdates";
 import { COLLECTIONS } from "@/constants";
-import { Skeleton, Star, MonthSelector, EmptyList, Road } from "@/components";
+import { Skeleton, Star, MonthSelector, EmptyList } from "@/components";
 import { useFetch } from "@/hooks";
 import { Button, Chip } from "@mui/material";
 // import { fetchStats, setIsStatsLoading, TData } from '@/stores/charts';
@@ -36,6 +36,10 @@ const App = () => {
   const [is_loading_summary, summary] = useFetch(COLLECTIONS.SUMMARY);
   const [is_road_empty, setIsRoadEmpty] = useState(false);
   const [is_loading_road, road] = useFetch(COLLECTIONS.ROADMAP);
+  const [is_loading_app, app] = useFetch(COLLECTIONS.ROADMAP_DERIV_APP);
+  const [is_loading_com, com] = useFetch(COLLECTIONS.ROADMAP_DERIV_COM);
+  const [is_loading_bots, bots] = useFetch(COLLECTIONS.ROADMAP_BOTS);
+  const [is_loading_cashier, cashier] = useFetch(COLLECTIONS.ROADMAP_CASHIER);
   // const [filtered_repositories, setFilteredRepositories] = useState<[string, TData][]>(Object.keys(charts.stats).length > 0 ? [Object.entries(charts.stats)[0]] : []);
   // const [current_repo_name, setCurrentRepoName] = useState('');
   const exportRef = useRef();
@@ -387,11 +391,9 @@ const App = () => {
                     <th className="table-head text-white text-center">Deriv.com</th>
                     <td className="table-data">
                       <ul className="list-disc">
-                        <li className="p-1">Rebranding Deriv.com</li>
-                        <li className="p-1">Backend CMS dashboard for Deriv.com (BFF)</li>
-                        <li className="p-1">E2E test benchmark</li>
-                        <li className="p-1">React profiler on projects</li>
-                        <li className="p-1">React 18 on deriv-com</li>
+                        {com.map((item) => {
+                          return <li className="p-1">{item.title}</li>;
+                        })}
                       </ul>
                     </td>
                   </tr>
@@ -399,10 +401,9 @@ const App = () => {
                     <th className="table-head text-white text-center">Deriv App</th>
                     <td className="table-data">
                       <ul className="list-disc">
-                        <li className="p-1">New contract type - Turbos</li>
-                        <li className="p-1">New contract type - Vanilla on Financial</li>
-                        <li className="p-1">Revamping MT5 jurisdiction modal UI for better user experience</li>
-                        <li className="p-1">Implementation of SwapFree, cTrader and DerivEZ on Trader’s hub dashboard</li>
+                        {app.map((item) => {
+                          return <li className="p-1">{item.title}</li>;
+                        })}
                       </ul>
                     </td>
                   </tr>
@@ -410,7 +411,9 @@ const App = () => {
                     <th className="table-head text-white text-center">Bots</th>
                     <td className="table-data">
                       <ul className="list-disc">
-                        <li className="p-1">Deriv branding on app.deriv.com</li>
+                        {bots.map((item) => {
+                          return <li className="p-1">{item.title}</li>;
+                        })}
                       </ul>
                     </td>
                   </tr>
@@ -418,7 +421,9 @@ const App = () => {
                     <th className="table-head text-white text-center">Wallets/Cashier</th>
                     <td className="table-data">
                       <ul className="list-disc">
-                        <li className="p-1">Fiat cashier (Doughflow) dark mode</li>
+                        {cashier.map((item) => {
+                          return <li className="p-1">{item.title}</li>;
+                        })}
                       </ul>
                     </td>
                   </tr>
