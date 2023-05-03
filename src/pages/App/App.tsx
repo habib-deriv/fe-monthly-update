@@ -18,7 +18,12 @@ import { capitalize, sendMonthlyUpdate, has_items_in_month } from "@/utils";
 import "./App.scss";
 import BackgroundImg from "@/assets/bg_img.png";
 import PerformanceImg from "@/assets/performance.png";
-import OverviewImg from "@/assets/overview.png";
+import Rum from "@/assets/rum_sessions.png";
+import Error from "@/assets/error_report.png";
+import Core from "@/assets/core_web.png";
+import Frustration from "@/assets/frustration_signals.png";
+import Party from "@/assets/perfomance_party.png";
+import Funnel from "@/assets/funnel.png";
 
 const App = () => {
   // const dispatch = useDispatch<TAppDispatch>();
@@ -187,7 +192,7 @@ const App = () => {
 
           <div className="flex background-img justify-start p-4 banner-content">
             <span className="block main-header font-bold text-white p-4 rightous-font">
-              Frontend Monthly Report March 2023
+              Frontend Monthly Report April 2023
             </span>
           </div>
 
@@ -214,40 +219,72 @@ const App = () => {
           {/* Redmine */}
           <div className="">
             <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
-              Improving Performance: A summary of achievements and future plans
+              Deriv.com numbers from DD RUM
             </span>
             <div className="width90">
-              <span className="block text-md font-normal text-black text-justify p-4 my-4">
-                We've been working hard to improve the performance of Deriv.com.
-                We've already achieved great results with FID and CLS, but we're
-                still working on improving LCP. We recently improved image
-                compression on desktop, but we're still working on mobile
-                devices. Our rebranded design, upcoming refactoring and Gatsby
-                updates will further contribute to the performance improvements.
-                <br />
-                <br />
-                Besides, we are also focused on enhancing the performance of
-                Trader's Hub and DTrader.
-              </span>
+              {/*<span className="block text-md font-normal text-black text-justify p-4 my-4">*/}
+              {/*  We've been working hard to improve the performance of Deriv.com.*/}
+              {/*  We've already achieved great results with FID and CLS, but we're*/}
+              {/*  still working on improving LCP. We recently improved image*/}
+              {/*  compression on desktop, but we're still working on mobile*/}
+              {/*  devices. Our rebranded design, upcoming refactoring and Gatsby*/}
+              {/*  updates will further contribute to the performance improvements.*/}
+              {/*  <br />*/}
+              {/*  <br />*/}
+              {/*  Besides, we are also focused on enhancing the performance of*/}
+              {/*  Trader's Hub and DTrader.*/}
+              {/*</span>*/}
+              <br />
               <img
                 className="performance-update"
-                src={OverviewImg}
+                src={Rum}
                 alt="performance update"
               />
-              <span className="block text-md font-normal text-black text-justify p-4 my-4">
-                Last month, we improved Image compression and were able to bring
-                down LCP considerably on desktop. From 60.31% of our clients
-                being in good zone, we moved to 75.47% (screenshot attached)
-                However, these improvements are not highly visible on mobile
-                devices, due to various reasons including low bandwidth
-                networks.
-              </span>
-              <img
-                className="performance-update"
-                src={PerformanceImg}
-                alt="performance update"
-              />
+              {/*<span className="block text-md font-normal text-black text-justify p-4 my-4">*/}
+              {/*  Last month, we improved Image compression and were able to bring*/}
+              {/*  down LCP considerably on desktop. From 60.31% of our clients*/}
+              {/*  being in good zone, we moved to 75.47% (screenshot attached)*/}
+              {/*  However, these improvements are not highly visible on mobile*/}
+              {/*  devices, due to various reasons including low bandwidth*/}
+              {/*  networks.*/}
+              {/*</span>*/}
+              {/*<img*/}
+              {/*  className="performance-update"*/}
+              {/*  src={PerformanceImg}*/}
+              {/*  alt="performance update"*/}
+              {/*/>*/}
               {/* <RedmineUpdates is_editable={true} /> */}
+              <br />
+              <img
+                  className="performance-update"
+                  src={Error}
+                  alt="performance update"
+              />
+              <br />
+              <img
+                  className="performance-update"
+                  src={Core}
+                  alt="performance update"
+              />
+              <br />
+              <img
+                  className="performance-update"
+                  src={Frustration}
+                  alt="performance update"
+              />
+              <br />
+              <img
+                  className="performance-update"
+                  src={Party}
+                  alt="performance update"
+              />
+              <br />
+              <img
+                  className="performance-update"
+                  src={Funnel}
+                  alt="performance update"
+              />
+              <br />
             </div>
           </div>
 
@@ -403,7 +440,7 @@ const App = () => {
                   </tr>
                   <tr>
                     <th className="table-head text-white text-center">
-                      Deriv App
+                      Trading Apps
                     </th>
                     <td className="table-data">
                       <ul className="list-disc">
@@ -414,7 +451,7 @@ const App = () => {
                     </td>
                   </tr>
                   <tr>
-                    <th className="table-head text-white text-center">Bots</th>
+                    <th className="table-head text-white text-center">DP2P & DTrader & Bots</th>
                     <td className="table-data">
                       <ul className="list-disc">
                         {bots.map((item) => {
