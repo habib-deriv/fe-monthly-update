@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 import domtoimage from "dom-to-image";
 import FileSaver from "file-saver";
 // import  Chart  from '@/components/charts';
-import RedmineUpdates from "@components/RedmineUpdates";
 import { COLLECTIONS } from "@/constants";
 import { Skeleton, Star, MonthSelector, EmptyList } from "@/components";
 import { useFetch } from "@/hooks";
@@ -16,14 +15,7 @@ import { TRootState } from "@/stores/store";
 // import { setIsDateChanged} from '@/stores/settings';
 import { capitalize, sendMonthlyUpdate, has_items_in_month } from "@/utils";
 import "./App.scss";
-import BackgroundImg from "@/assets/bg_img.png";
-import PerformanceImg from "@/assets/performance.png";
-import Rum from "@/assets/rum_sessions.png";
-import Error from "@/assets/error_report.png";
-import Core from "@/assets/core_web.png";
-import Frustration from "@/assets/frustration_signals.png";
-import Party from "@/assets/perfomance_party.png";
-import Funnel from "@/assets/funnel.png";
+import Lcp from "@/assets/lcp.png";
 
 const App = () => {
   // const dispatch = useDispatch<TAppDispatch>();
@@ -192,7 +184,7 @@ const App = () => {
 
           <div className="flex background-img justify-start p-4 banner-content">
             <span className="block main-header font-bold text-white p-4 rightous-font">
-              Frontend Monthly Report April 2023
+              WebPlatform Monthly Updates April 2023
             </span>
           </div>
 
@@ -208,7 +200,7 @@ const App = () => {
                   return (
                     <div className="block summary width90">
                       <span className="block text-justify font-3 text-lt">
-                        {item.description}
+                        Hello fellow Derivians. We are excited to reintroduce ourselves as the <b>Web Platforms</b> team. We are proud to share that our contributions are no longer limited to developing front-end services for BE; we are now also supporting our DevOps team in hosting, self-monitoring our services, and focusing on performance improvements. Without further delay, we present to you our monthly report detailing the progress we have made in these areas. Over the past month, our team has been primarily focused on enhancing the performance of the soon-to-be-launched rebranded Deriv.com homepage. We have also been diligently working on integrating the performance metrics on Datadog for both Deriv.com and app.deriv. Furthermore, most of our teams have successfully transitioned to a Scrum-based approach. Though we are encountering some challenges during the process, we remain committed to overcoming these obstacles and continuing to deliver the best possible results. As always, we highly value your feedback and thoughts on our progress. Please do not hesitate to share your opinions and suggestions with us.
                       </span>
                     </div>
                   );
@@ -216,72 +208,16 @@ const App = () => {
             </div>
           )}
 
-          {/* Redmine */}
+          {/* Datadog */}
           <div className="">
             <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
-              Deriv.com numbers from DD RUM
+              Deriv.com numbers from Datadog RUM
             </span>
             <div className="width90">
-              {/*<span className="block text-md font-normal text-black text-justify p-4 my-4">*/}
-              {/*  We've been working hard to improve the performance of Deriv.com.*/}
-              {/*  We've already achieved great results with FID and CLS, but we're*/}
-              {/*  still working on improving LCP. We recently improved image*/}
-              {/*  compression on desktop, but we're still working on mobile*/}
-              {/*  devices. Our rebranded design, upcoming refactoring and Gatsby*/}
-              {/*  updates will further contribute to the performance improvements.*/}
-              {/*  <br />*/}
-              {/*  <br />*/}
-              {/*  Besides, we are also focused on enhancing the performance of*/}
-              {/*  Trader's Hub and DTrader.*/}
-              {/*</span>*/}
-              <br />
-              <img
-                className="performance-update"
-                src={Rum}
-                alt="performance update"
-              />
-              {/*<span className="block text-md font-normal text-black text-justify p-4 my-4">*/}
-              {/*  Last month, we improved Image compression and were able to bring*/}
-              {/*  down LCP considerably on desktop. From 60.31% of our clients*/}
-              {/*  being in good zone, we moved to 75.47% (screenshot attached)*/}
-              {/*  However, these improvements are not highly visible on mobile*/}
-              {/*  devices, due to various reasons including low bandwidth*/}
-              {/*  networks.*/}
-              {/*</span>*/}
-              {/*<img*/}
-              {/*  className="performance-update"*/}
-              {/*  src={PerformanceImg}*/}
-              {/*  alt="performance update"*/}
-              {/*/>*/}
-              {/* <RedmineUpdates is_editable={true} /> */}
               <br />
               <img
                   className="performance-update"
-                  src={Error}
-                  alt="performance update"
-              />
-              <br />
-              <img
-                  className="performance-update"
-                  src={Core}
-                  alt="performance update"
-              />
-              <br />
-              <img
-                  className="performance-update"
-                  src={Frustration}
-                  alt="performance update"
-              />
-              <br />
-              <img
-                  className="performance-update"
-                  src={Party}
-                  alt="performance update"
-              />
-              <br />
-              <img
-                  className="performance-update"
-                  src={Funnel}
+                  src={Lcp}
                   alt="performance update"
               />
               <br />
@@ -476,9 +412,6 @@ const App = () => {
               </table>
             </div>
           )}
-          <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
-          Join the decentralized revolution and unlock the potential of cryptocurrency today
-          </span>
         </div>
       </React.Fragment>
     </div>
