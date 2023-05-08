@@ -1,10 +1,49 @@
 body {
   background-color: #636e72;
 }
+.d-none{
+  display: none !important;
+}
+.mx-100{
+  max-width: 100% !important;
+}
 .width90 {
   width: 90%;
   margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+  #root .grid-cols-2 {
+    grid-template-columns: auto !important;
+  }
+  .main-header {
+    font-size: 33px !important;
+  }
+  .star-container {
+      width: auto !important;
+      flex-direction: column !important;
+  }
+  table.width1000 {
+    width: auto;
+    margin: 0 auto;
+  }
+  .table-row-header {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+  .table-data {
+    width: 100% !important;
+    height: auto !important;
+  }
+  tr.table-row-header tr {
+    width: 100%;
+  }
+  td.table-data ul {
+    width: 100%;
+  }
+}
+
 .app {
   &-hero {
     min-height: calc(100vh - 64px - 48px);
@@ -84,7 +123,7 @@ $stage4: #79a881;
 }
 .table-row-header {
   display: flex;
-  gap: 50px;
+  justify-content: space-around;
 }
 .table-head {
   width: 200px;
@@ -134,11 +173,15 @@ $stage4: #79a881;
 .table-data-row {
   margin: 20px;
 }
+.width1000 {
+  width: 1000px;
+  margin: 0 auto;
+}
 .table-data {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  width: 200px;
+  width: 210px;
   height: 500px;
   margin: 40px 0;
   border-radius: 12px;

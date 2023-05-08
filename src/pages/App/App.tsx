@@ -130,9 +130,9 @@ const App = () => {
   };
 
   return (
-    <div className="app-hero py-10 px-0">
+    <div className="app-hero px-0">
       <React.Fragment>
-        <div className="flex items-center justify-between mb-2 px-1">
+        <div className="flex items-center justify-between mb-2 px-1 d-none">
           <div className="flex items-center justify-start basis-1/3">
             <h3 className="text-2xl font-bold mr-2 color-white">Overview</h3>
             <Chip
@@ -184,7 +184,7 @@ const App = () => {
 
           <div className="flex background-img justify-start p-4 banner-content">
             <span className="block main-header font-bold text-white p-4 rightous-font">
-              WebPlatform Monthly Updates April 2023
+              Web Platform Monthly Updates April 2023
             </span>
           </div>
 
@@ -193,14 +193,19 @@ const App = () => {
           {!is_loading_summary && (
             <div className="mt-ng20">
               <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
-                Frontend monthly report
+                Web Platform monthly report
               </span>
               {summary &&
                 summary.map((item) => {
                   return (
                     <div className="block summary width90">
                       <span className="block text-justify font-3 text-lt">
-                        Hello fellow Derivians. We are excited to reintroduce ourselves as the <b>Web Platforms</b> team. We are proud to share that our contributions are no longer limited to developing front-end services for BE; we are now also supporting our DevOps team in hosting, self-monitoring our services, and focusing on performance improvements. Without further delay, we present to you our monthly report detailing the progress we have made in these areas. Over the past month, our team has been primarily focused on enhancing the performance of the soon-to-be-launched rebranded Deriv.com homepage. We have also been diligently working on integrating the performance metrics on Datadog for both Deriv.com and app.deriv. Furthermore, most of our teams have successfully transitioned to a Scrum-based approach. Though we are encountering some challenges during the process, we remain committed to overcoming these obstacles and continuing to deliver the best possible results. As always, we highly value your feedback and thoughts on our progress. Please do not hesitate to share your opinions and suggestions with us.
+                      Hello fellow Derivians, 
+We are excited to reintroduce ourselves as the <b>Web Platform</b> team.
+We want to reflect the team remit to create performant and top quality web applications which includes both the web frontend software and maintaining the platform that supports it. We are doing this by taking greater ownership of the monitoring, logging and CloudFlare platforms to self-manage our developments. Without further ado, we present to you our monthly report detailing the progress we have made in these areas.
+Over the past month, our team has been primarily focused on enhancing the performance of the soon-to-be-launched rebranded Deriv.com homepage. We have also been diligently working on integrating the performance metrics on Datadog for both Deriv.com and app.deriv.
+Furthermore, most of our teams have successfully transitioned to a Scrum-based approach. Though we are encountering some challenges during the process, we remain committed to overcoming these obstacles and continuing to deliver the best possible results.
+As always, we highly value your feedback and thoughts on our progress. Please do not hesitate to share your opinions and suggestions with us.
                       </span>
                     </div>
                   );
@@ -216,9 +221,9 @@ const App = () => {
             <div className="width90">
               <br />
               <img
-                  className="performance-update"
-                  src={Lcp}
-                  alt="performance update"
+                className="performance-update"
+                src={Lcp}
+                alt="performance update"
               />
               <br />
             </div>
@@ -360,7 +365,7 @@ const App = () => {
               <div className="block text-2xl font-medium text-black text-center tracking-widest p-4 mt-5 mb-5">
                 What's next?
               </div>
-              <table className="width90 text-sm">
+              <table className="width1000 text-sm">
                 <tr className="table-row-header">
                   <tr>
                     <th className="table-head text-white text-center">
@@ -387,7 +392,9 @@ const App = () => {
                     </td>
                   </tr>
                   <tr>
-                    <th className="table-head text-white text-center">DP2P & DTrader & Bots</th>
+                    <th className="table-head text-white text-center">
+                      DP2P & DTrader & Bots
+                    </th>
                     <td className="table-data">
                       <ul className="list-disc">
                         {bots.map((item) => {
