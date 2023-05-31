@@ -184,7 +184,7 @@ const App = () => {
 
           <div className="flex background-img justify-start p-4 banner-content">
             <span className="block main-header font-bold text-white p-4 rightous-font">
-              Web Platform Monthly Updates April 2023
+              Web Platform Monthly Updates May 2023
             </span>
           </div>
 
