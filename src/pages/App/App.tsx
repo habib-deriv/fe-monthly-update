@@ -15,7 +15,9 @@ import { TRootState } from "@/stores/store";
 // import { setIsDateChanged} from '@/stores/settings';
 import { capitalize, sendMonthlyUpdate, has_items_in_month } from "@/utils";
 import "./App.scss";
-import Lcp from "@/assets/lcp.png";
+import New from "@/assets/new.png";
+import Old from "@/assets/old.png";
+
 
 const App = () => {
   // const dispatch = useDispatch<TAppDispatch>();
@@ -205,12 +207,31 @@ const App = () => {
                   return (
                     <div className="block summary width90">
                       <span className="block text-justify font-3 text-lt">
-                      Hello fellow Derivians, 
-We are excited to reintroduce ourselves as the <b>Web Platform</b> team.
-We want to reflect the team remit to create performant and top quality web applications which includes both the web frontend software and maintaining the platform that supports it. We are doing this by taking greater ownership of the monitoring, logging and CloudFlare platforms to self-manage our developments. Without further ado, we present to you our monthly report detailing the progress we have made in these areas.
-Over the past month, our team has been primarily focused on enhancing the performance of the soon-to-be-launched rebranded Deriv.com homepage. We have also been diligently working on integrating the performance metrics on Datadog for both Deriv.com and app.deriv.
-Furthermore, most of our teams have successfully transitioned to a Scrum-based approach. Though we are encountering some challenges during the process, we remain committed to overcoming these obstacles and continuing to deliver the best possible results.
-As always, we highly value your feedback and thoughts on our progress. Please do not hesitate to share your opinions and suggestions with us.
+                      Hello fellow Derivians,
+<br />
+We are excited to share the remarkable accomplishments of the <b>Web Platform team</b> over the past month. Our relentless dedication to creating performant and top-quality web applications, along with maintaining the supporting platform, has yielded impressive results in Core Web Vitals.
+<br />
+
+Firstly, we are thrilled to announce the successful rebranding of the Deriv.com homepage. With Live Markets Pricing, users can now access real-time information, enhancing their trading experience. We are diligently working on revamping other pages, ensuring a seamless user interface across the platform. Additionally, Binary.com has been redirected to Deriv.com, simplifying user access.
+<br />
+
+Our latest Deriv API version showcases outstanding progress. With a test coverage of approximately 95%, we have ensured the reliability and robustness of our API, enabling developers to interact smoothly.
+<br />
+
+Moreover, we proudly unveil the user-friendly new UI for the Deriv Bot homepage. This update empowers users to navigate and utilize the Deriv Bot platform effortlessly.
+<br />
+
+In our commitment to staying at the forefront of web development, we are actively preparing a major update. Adoption of Gatsby 5 and React 18 will bring exciting features and performance optimizations to our web applications.
+<br />
+
+Despite challenges, we remain dedicated to overcoming obstacles and delivering exceptional results. Your feedback is invaluable. Please share your opinions and suggestions with us.
+<br />
+
+Thank you for your continued support as we strive to provide the best web experience.
+<br />
+
+Best regards, <br />
+The Web Platform Team
                       </span>
                     </div>
                   );
@@ -223,11 +244,27 @@ As always, we highly value your feedback and thoughts on our progress. Please do
             <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
               Deriv.com numbers from Datadog RUM
             </span>
+
             <div className="width90">
+              <b>Largest Contentful Paint (LCP) </b>is an important, stable Core Web Vital metric for measuring perceived load speed because it marks the point in the page load timeline when the page's main content has likely loaded—a fast LCP helps reassure the user that the page is useful.
+              <br />
+              <br />
+              
+              The below graphs are our newly measured LCP after our rebranding release of Deriv.com and the LCP before the release week. Where it's measured as our current average as <b>2.83s</b> and it was <b>3.31s</b> before for LCP.
+              <br />
+
+              <img
+                className="performance-update"
+                src={New}
+                alt="performance update"
+              />
+              <br />
+            </div>
+            <div className="width90 text-center">
               <br />
               <img
                 className="performance-update"
-                src={Lcp}
+                src={Old}
                 alt="performance update"
               />
               <br />
