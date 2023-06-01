@@ -12,7 +12,6 @@ import { setRefresh } from '@/stores/content';
 
 export type TFetchData = {
   id?: string;
-  ids: number
   [k: string]: any;
 };
 
