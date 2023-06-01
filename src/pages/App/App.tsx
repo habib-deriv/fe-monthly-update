@@ -356,9 +356,10 @@ As always, we highly value your feedback and thoughts on our progress. Please do
                 </span>
                 <div className="card-section">
                   <div className="flex flex-wrap justify-center star-container">
-                    {grouped_stars[settings.date.month].map((star, idx) => {
-                      return <Star key={idx} item={star} />;
-                    })}
+                    {grouped_stars[settings.date.month]
+                        .map((star, idx) => ({ idx, star }))
+                        .sort((a, b) => a.star.id - b.star.id)
+                        .map(({ idx, star }) => <Star key={idx} item={star} />)}
                   </div>
                 </div>
               </>
