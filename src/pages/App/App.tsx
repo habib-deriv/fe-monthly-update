@@ -25,6 +25,11 @@ const App = () => {
     "month",
     settings.list.months
   );
+  const [is_loading_leaders, leaders, grouped_leaders] = useFetch(
+    COLLECTIONS.LEADERS,
+    "month",
+    settings.list.months
+  );
   const [is_loading_tasks, tasks, grouped_tasks] = useFetch(
     COLLECTIONS.TASK,
     "week",
@@ -353,6 +358,23 @@ As always, we highly value your feedback and thoughts on our progress. Please do
                   <div className="flex flex-wrap justify-center star-container">
                     {grouped_stars[settings.date.month].map((star, idx) => {
                       return <Star key={idx} item={star} />;
+                    })}
+                  </div>
+                </div>
+              </>
+            )}
+          {/* Leaders */}
+          {is_loading_leaders && <Skeleton row={2} />}
+          {!is_loading_leaders &&
+            has_items_in_month(leaders, settings.date.month) && (
+              <>
+                <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 mt-5">
+                  Leader of the month
+                </span>
+                <div className="card-section">
+                  <div className="flex flex-wrap justify-center star-container">
+                    {grouped_leaders[settings.date.month].map((leader, idx) => {
+                      return <Star key={idx} item={leader} />;
                     })}
                   </div>
                 </div>

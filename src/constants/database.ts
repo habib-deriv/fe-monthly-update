@@ -6,6 +6,7 @@ export const COLLECTIONS = {
     ROADMAP_BOTS: 'col_roadmap_bots',
     ROADMAP_CASHIER: 'col_roadmap_cashier',
     STARS: 'col_stars',
+    LEADERS: 'col_leaders',
     GITHUB: 'col_github',
     REDMINE: 'col_redmine',
     SUMMARY: 'col_summary',
