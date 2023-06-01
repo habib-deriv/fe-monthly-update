@@ -11,7 +11,8 @@ import groupBy from 'lodash.groupby';
 import { setRefresh } from '@/stores/content';
 
 export type TFetchData = {
-  id: number;
+  id?: string;
+  ids: number
   [k: string]: any;
 };
 

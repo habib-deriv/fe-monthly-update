@@ -358,7 +358,7 @@ As always, we highly value your feedback and thoughts on our progress. Please do
                   <div className="flex flex-wrap justify-center star-container">
                     {grouped_stars[settings.date.month]
                         .map((star, idx) => ({ idx, star }))
-                        .sort((a, b) => a.star.id - b.star.id)
+                        .sort((a, b) => a.star.ids - b.star.ids)
                         .map(({ idx, star }) => <Star key={idx} item={star} />)}
                   </div>
                 </div>
