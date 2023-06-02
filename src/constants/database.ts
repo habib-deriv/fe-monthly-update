@@ -5,6 +5,8 @@ export const COLLECTIONS = {
     ROADMAP_DERIV_APP: 'col_roadmap_deriv_app',
     ROADMAP_BOTS: 'col_roadmap_bots',
     ROADMAP_CASHIER: 'col_roadmap_cashier',
+    ROADMAP_HUB: 'col_roadmap_hub',
+    ROADMAP_USER: 'col_roadmap_user',
     STARS: 'col_stars',
     LEADERS: 'col_leaders',
     GITHUB: 'col_github',

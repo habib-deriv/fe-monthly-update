@@ -44,6 +44,8 @@ const App = () => {
   const [is_loading_com, com] = useFetch(COLLECTIONS.ROADMAP_DERIV_COM);
   const [is_loading_bots, bots] = useFetch(COLLECTIONS.ROADMAP_BOTS);
   const [is_loading_cashier, cashier] = useFetch(COLLECTIONS.ROADMAP_CASHIER);
+  const [is_loading_hub, hub] = useFetch(COLLECTIONS.ROADMAP_HUB);
+  const [is_loading_user, user] = useFetch(COLLECTIONS.ROADMAP_USER);
   // const [filtered_repositories, setFilteredRepositories] = useState<[string, TData][]>(Object.keys(charts.stats).length > 0 ? [Object.entries(charts.stats)[0]] : []);
   // const [current_repo_name, setCurrentRepoName] = useState('');
   const exportRef = useRef();
@@ -472,6 +474,30 @@ Despite challenges, we remain dedicated to overcoming obstacles and delivering e
                     <td className="table-data">
                       <ul className="list-disc">
                         {cashier.map((item) => {
+                          return <li className="p-1">{item.title}</li>;
+                        })}
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th className="table-head text-white text-center">
+                      Trader's hub
+                    </th>
+                    <td className="table-data">
+                      <ul className="list-disc">
+                        {hub.map((item) => {
+                          return <li className="p-1">{item.title}</li>;
+                        })}
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th className="table-head text-white text-center">
+                      User journey/experience
+                    </th>
+                    <td className="table-data">
+                      <ul className="list-disc">
+                        {user.map((item) => {
                           return <li className="p-1">{item.title}</li>;
                         })}
                       </ul>
