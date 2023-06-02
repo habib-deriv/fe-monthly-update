@@ -215,7 +215,7 @@ We are excited to share the remarkable accomplishments of the <b>Web Platform te
 Firstly, we are thrilled to announce the successful rebranding of the Deriv.com homepage. With Live Markets Pricing, users can now access real-time information, enhancing their trading experience. We are diligently working on revamping other pages, ensuring a seamless user interface across the platform. Additionally, Binary.com has been redirected to Deriv.com, simplifying user access.
 <br />
 
-Our latest Deriv API version showcases outstanding progress. With a test coverage of approximately 95%, we have ensured the reliability and robustness of our API, enabling developers to interact smoothly.
+Our latest Deriv API version showcases outstanding progress. We have revamped the old UI with complete new design. With a test coverage of approximately 95%, we have ensured the reliability and robustness of our API, enabling developers to interact smoothly.
 <br />
 
 Moreover, we proudly unveil the user-friendly new UI for the Deriv Bot homepage. This update empowers users to navigate and utilize the Deriv Bot platform effortlessly.
@@ -226,12 +226,6 @@ In our commitment to staying at the forefront of web development, we are activel
 
 Despite challenges, we remain dedicated to overcoming obstacles and delivering exceptional results. Your feedback is invaluable. Please share your opinions and suggestions with us.
 <br />
-
-Thank you for your continued support as we strive to provide the best web experience.
-<br />
-
-Best regards, <br />
-The Web Platform Team
                       </span>
                     </div>
                   );
@@ -242,30 +236,37 @@ The Web Platform Team
           {/* Datadog */}
           <div className="">
             <span className="block text-2xl font-medium text-black text-center tracking-widest p-4 my-4">
-              Deriv.com numbers from Datadog RUM
+              Deriv.com numbers from Looker Studio Core Web Vitals
             </span>
 
             <div className="width90">
               <b>Largest Contentful Paint (LCP) </b>is an important, stable Core Web Vital metric for measuring perceived load speed because it marks the point in the page load timeline when the page's main content has likely loaded—a fast LCP helps reassure the user that the page is useful.
               <br />
+              <b>First Input Delay (FID)</b> is a Core Web Vital that measures the time in milliseconds from when a user first interacts with your site
               <br />
-              
-              The below graphs are our newly measured LCP after our rebranding release of Deriv.com and the LCP before the release week. Where it's measured as our current average as <b>2.83s</b> and it was <b>3.31s</b> before for LCP.
+              <b>Cumulative Layout Shift (CLS)</b> is a Core Web Vital that measures the cumulative score of all unexpected layout shifts within the viewport that occur during a page's entire lifecycle.
               <br />
-
+              <br />
+              <span className="lcp">Our LCP was 4.415s for Mobile and 3.057 for desktop before our Rebranding release.</span>
+              <br />
+              <br />
               <img
                 className="performance-update"
-                src={New}
+                src={Old}
                 alt="performance update"
+                width="100%"
               />
+              <br />
+              <span className="lcp">After the rebranding release, our LCP is 3.03s for mobile and 2.55 for desktop. Significant improvement is visible in FID as well. There's a little increase in CLS score as we have a lot of moving elements in our design, but we're still in the green zone</span>
               <br />
             </div>
             <div className="width90 text-center">
               <br />
               <img
                 className="performance-update"
-                src={Old}
+                src={New}
                 alt="performance update"
+                width="100%"
               />
               <br />
             </div>
