@@ -214,7 +214,7 @@ const App = () => {
 We are excited to share the remarkable accomplishments of the <b>Web Platform team</b> over the past month. Our relentless dedication to creating performant and top-quality web applications, along with maintaining the supporting platform, has yielded impressive results in Core Web Vitals.
 <br />
 
-Firstly, we are thrilled to announce the successful rebranding of the Deriv.com homepage. With Live Markets Pricing, users can now access real-time information, enhancing their trading experience. We are diligently working on revamping other pages, ensuring a seamless user interface across the platform. Additionally, Binary.com has been redirected to Deriv.com, simplifying user access.
+Firstly, we are thrilled to announce the successful rebranding of the Deriv.com homepage and Deriv App. With Live Markets Pricing, users can now access real-time information, enhancing their trading experience. We are diligently working on revamping other pages, ensuring a seamless user interface across the platform. Additionally, Binary.com has been redirected to Deriv.com, simplifying user access.
 <br />
 
 Our latest Deriv API version showcases outstanding progress. We have revamped the old UI with complete new design. With a test coverage of approximately 95%, we have ensured the reliability and robustness of our API, enabling developers to interact smoothly.
