@@ -260,7 +260,7 @@ Despite challenges, we remain dedicated to overcoming obstacles and delivering e
                 width="100%"
               />
               <br />
-              <span className="lcp">Our LCP was 4.41s for Mobile and 3.05s for desktop <b>before</b> our Rebranding release.</span>
+              <span className="lcp">Our LCP was 4.41s for mobile and 3.05s for desktop <b>before</b> our Rebranding release.</span>
               <br />
             </div>
             <div className="width90 text-center">
