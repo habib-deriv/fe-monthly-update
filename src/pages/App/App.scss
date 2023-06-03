@@ -5,7 +5,7 @@ body {
   text-align: center;
 }
 .d-none{
-  display: none;
+  display: none !important;
 }
 .leader-of-the-month{
   flex-direction: row-reverse;
