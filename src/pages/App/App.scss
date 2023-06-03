@@ -28,6 +28,9 @@ body {
       width: auto !important;
       flex-direction: column !important;
   }
+  .star-container.leader-of-the-month{
+    flex-direction: column-reverse !important;
+  }
   table.width1000 {
     width: auto;
     margin: 0 auto;
