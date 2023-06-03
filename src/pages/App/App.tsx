@@ -249,24 +249,25 @@ Despite challenges, we remain dedicated to overcoming obstacles and delivering e
               <b>Cumulative Layout Shift (CLS)</b> is a Core Web Vital that measures the cumulative score of all unexpected layout shifts within the viewport that occur during a page's entire lifecycle.
               <br />
               <br />
-              <span className="lcp">Our LCP was 4.415s for Mobile and 3.057 for desktop before our Rebranding release.</span>
+              <span className="lcp"><b>After</b> the release of our rebranded Deriv.com, our LCP is 3.03s for mobile and 2.55s for desktop. Significant improvement is visible in FID as well. There's a little increase in CLS score as we have a lot of moving elements in our design, but we're still in the green zone</span>
+
               <br />
               <br />
               <img
                 className="performance-update"
-                src={Old}
+                src={New}
                 alt="performance update"
                 width="100%"
               />
               <br />
-              <span className="lcp">After the rebranding release, our LCP is 3.03s for mobile and 2.55 for desktop. Significant improvement is visible in FID as well. There's a little increase in CLS score as we have a lot of moving elements in our design, but we're still in the green zone</span>
+              <span className="lcp">Our LCP was 4.41s for Mobile and 3.05s for desktop <b>before</b> our Rebranding release.</span>
               <br />
             </div>
             <div className="width90 text-center">
               <br />
               <img
                 className="performance-update"
-                src={New}
+                src={Old}
                 alt="performance update"
                 width="100%"
               />
@@ -414,7 +415,7 @@ Despite challenges, we remain dedicated to overcoming obstacles and delivering e
                   Leader of the month
                 </span>
                 <div className="card-section">
-                  <div className="flex flex-wrap justify-center star-container">
+                  <div className="flex flex-wrap justify-center star-container leader-of-the-month">
                     {grouped_leaders[settings.date.month].map((leader, idx) => {
                       return <Star key={idx} item={leader} />;
                     })}

@@ -5,6 +5,10 @@ body {
   text-align: center;
 }
 .d-none{
+  display: none;
+}
+.leader-of-the-month{
+  flex-direction: row-reverse;
 }
 .mx-100{
   max-width: 100% !important;
